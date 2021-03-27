@@ -18,7 +18,7 @@ public class JobTest {
 
     @Before
 
-    public void initialzeJobObjects()  {
+    public void initJobObjects()  {
 
         job1 = new Job();
 
