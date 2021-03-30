@@ -97,7 +97,7 @@ public class Job {
             nameValue = "Data not available.";
         }
 
-        if (this.location.getValue().equals(""))  {
+        if (this.location.equals(null) || this.location.getValue().equals(""))  {
             locationValue = "Data not available.";
         }
 

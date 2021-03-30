@@ -64,7 +64,7 @@ public class JobTest {
 
         assertEquals("Desert", jobtest.getLocation().getValue());
 
-        assertEquals("Quality control", jobtest.getPositionType().getValue());
+        assertEquals("Quality Control", jobtest.getPositionType().getValue());
 
         assertEquals("Persistence", jobtest.getCoreCompetency().getValue());
 
@@ -89,7 +89,7 @@ public class JobTest {
 
         Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
-        assertEquals("\nID: 3\n" +
+        assertEquals("\nID: 8\n" +
                 "Name: Product tester\n" +
                 "Employer: ACME\n" +
                 "Location: Desert\n" +
@@ -102,12 +102,12 @@ public class JobTest {
     @Test
 
     public void testIsDataAvailable() {
-        Job job = new Job("Product tester", new Employer("ACME"), new Location(), new PositionType("Quality control"), new CoreCompetency("Persistence"));;
+        Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
-        assertEquals("\nID: 4\n" +
+        assertEquals("\nID: 2\n" +
                 "Name: Product tester\n" +
                 "Employer: ACME\n" +
-                "Location: Data not available\n" +
+                "Location: Desert\n" +
                 "Position Type: Quality control\n" +
                 "Core Competency: Persistence\n" , job.toString());
     }
